@@ -21,7 +21,6 @@
         <!--Basico-->
         <!--Sistema-->
         <script src="src/js/popup.js" type="text/javascript"></script>
-        <script src="src/js/sistem.js" type="text/javascript"></script>
         <!--Sistema-->
 
         <title>UNIUBE - Diretório Acadêmico - Ambiental</title>
