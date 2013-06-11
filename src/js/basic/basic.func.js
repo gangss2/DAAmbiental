@@ -1,5 +1,5 @@
 // 
-//  VER 1.0.0.0
+//  VER 1.1.0.0
 // 
 // Gettters DOM ...
 function $id(quem) {

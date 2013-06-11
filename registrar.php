@@ -10,8 +10,16 @@
         <link type="image/png" rel="icon" href="src/imgs/logoIntro.png" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <script src="src/js/basic.js" type="text/javascript"></script>
+        <!--Basico-->
+        <script src="src/js/basic/AjaxRequest.class.js" type="text/javascript"></script>
+        <script src="src/js/basic/basic.func.js" type="text/javascript"></script>
+        <script src="src/js/basic/Propriedades.class.js" type="text/javascript"></script>
+        <script src="src/js/basic/info.js" type="text/javascript"></script>
+        <!--Basico-->
+        <!--Sistema-->
         <script src="src/js/popup.js" type="text/javascript"></script>
+        <script src="src/js/sistem.js" type="text/javascript"></script>
+        <!--Sistema-->
 
         <title>UNIUBE - Diretório Acadêmico - Ambiental</title>
     </head>

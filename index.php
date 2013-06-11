@@ -15,8 +15,9 @@
         <!--icone-->
 
         <!--Basico-->
-        <script src="src/js/basic/basic.js" type="text/javascript"></script>
-        <script src="src/js/basic/info.js" type="text/javascript"></script>
+        <script src="src/js/basic/AjaxRequest.class.js" type="text/javascript"></script>
+        <script src="src/js/basic/basic.func.js" type="text/javascript"></script>
+        <script src="src/js/basic/Propriedades.class.js" type="text/javascript"></script>
         <script src="src/js/basic/info.js" type="text/javascript"></script>
         <!--Basico-->
         <!--Sistema-->

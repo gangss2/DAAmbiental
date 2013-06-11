@@ -46,7 +46,7 @@ info.init = {
     basic: {
         ClassName: "info"
     },
-    disX: 5,
+    disX: 15,
     disY: 5,
     padding: "5px",
     bgColor: "#000",
