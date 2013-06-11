@@ -10,6 +10,9 @@
         <link type="image/png" rel="icon" href="src/imgs/logoIntro.png" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+        <!--FB-->
+        <script src="src/API/fb.api.js" type="text/javascript"></script>
+        <!--FB-->
         <!--Basico-->
         <script src="src/js/basic/AjaxRequest.class.js" type="text/javascript"></script>
         <script src="src/js/basic/basic.func.js" type="text/javascript"></script>

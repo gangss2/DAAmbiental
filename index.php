@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <!--estilos-->
         <link type="text/css" rel="stylesheet" href="src/css/divsFineStyle.css" />
         <link type="text/css" rel="stylesheet" href="src/css/specific/login.css" />
@@ -9,11 +8,9 @@
         <link type="text/css" rel="stylesheet" href="src/css/geral.css" />
         <link type="text/css" rel="stylesheet" href="src/css/paragrafs.css" />
         <!--estilos-->
-
         <!--icone-->
         <link type="image/png" rel="icon" href="src/imgs/logoIntro.png" />
         <!--icone-->
-
         <!--Basico-->
         <script src="src/js/basic/AjaxRequest.class.js" type="text/javascript"></script>
         <script src="src/js/basic/basic.func.js" type="text/javascript"></script>
@@ -24,7 +21,6 @@
         <script src="src/js/popup.js" type="text/javascript"></script>
         <script src="src/js/sistem.js" type="text/javascript"></script>
         <!--Sistema-->
-
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>UNIUBE - Diretório Acadêmico - Ambiental</title>
     </head>
