@@ -21,17 +21,6 @@ class db {
     private $db; // ligação
     private $basedados; // database
 
-//    
-//    bastauberlandia.net16.com
-//    bastauberlandia.net16.com
-//    bastauberlandia.net16.com
-//    bastauberlandia.net16.com
-//    
-//    $mysql_host = "mysql3.000webhost.com";
-//    $mysql_database = "a5172336_basta";
-//    $mysql_user = "a5172336_gangss";
-//    $mysql_password = "bastaUberlandia4001";
-
     function __construct() {
         $this->db = mysql_connect($this->host, $this->login_db, $this->senha_db);
         $this->basedados = mysql_select_db($this->database, $this->db);
