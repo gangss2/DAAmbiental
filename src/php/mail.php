@@ -9,4 +9,5 @@
     $resultado = mail($to, $subject, $message);
     
     echo $resultado;
+    
 ?>
