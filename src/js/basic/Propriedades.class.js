@@ -1,25 +1,25 @@
-function $properties() {
+function Propriedades() {
     this.key = new Array();
     this.value = new Array();
 }
-$properties.prototype.add = function(key, value) {
+Propriedades.prototype.add = function(key, value) {
     this.key[this.key.length] = key;
     this.value[this.value.length] = value;
 };
-$properties.prototype.remove = function(key) {
+Propriedades.prototype.remove = function(key) {
     var index = this.key.indexOf(key);
     this.key.splice(index, 1);
     this.value.splice(index, 1);
 };
-$properties.prototype.getValue = function(key) {
+Propriedades.prototype.getValue = function(key) {
     var index = this.key.indexOf(key);
     return this.value[index];
 };
-$properties.prototype.setValue = function(key, value) {
+Propriedades.prototype.setValue = function(key, value) {
     var index = this.key.indexOf(key);
     this.value[index] = value;
 };
-$properties.prototype.getUrlProperties = function() {
+Propriedades.prototype.getUrlProperties = function() {
 
     var urlReturn = "?";
     for (var i in this.key)
@@ -27,7 +27,7 @@ $properties.prototype.getUrlProperties = function() {
 
     return urlReturn;
 };
-$properties.prototype.getPostProperties = function() {
+Propriedades.prototype.getPostProperties = function() {
     
     var urlReturn = "";
     for (var i in this.key)
@@ -35,7 +35,7 @@ $properties.prototype.getPostProperties = function() {
 
     return urlReturn;
 };
-$properties.prototype.addByUrl = function(url) {
+Propriedades.prototype.addByUrl = function(url) {
     if (url.indexOf("?") !== -1)
         var a = url.substr((url.indexOf("?") + 1));
     else
@@ -49,7 +49,7 @@ $properties.prototype.addByUrl = function(url) {
         this.value.push(split[1]);
     }
 };
-$properties.prototype.getKeys = function() {
+Propriedades.prototype.getKeys = function() {
     var a = new Array();
     a = a.concat(this.key);
     return a;
