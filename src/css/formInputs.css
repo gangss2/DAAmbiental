@@ -1,0 +1,6 @@
+input[type="text"], input[type="password"] {
+    width: 98%;
+    height: 98%;
+    padding: 1%;
+    border: solid 1px;
+}

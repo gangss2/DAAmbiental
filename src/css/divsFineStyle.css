@@ -1,0 +1,6 @@
+.borderRedonda {
+    border: solid 1px #cccccc;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: left;
+}
