@@ -1,4 +1,4 @@
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="number"] {
     width: 98%;
     height: 98%;
     padding: 1%;

@@ -12,7 +12,7 @@ popup = {
             popup.noHandler = handler;
         }
     },
-    show: function(title, msg) {
+    show: function(title, msg, handler) {
         var td = '<p class="titulo center font_nice">' + title + "</p>";
         td += '<p class="font_nice_noShadow">' + msg + '</p>';
         popup.campoDaMsg.innerHTML = td;
@@ -23,6 +23,13 @@ popup = {
         popup.up.style.setProperty("opacity", "1");
         popup.up.style.setProperty("filter", "alpha(opacity=100)");
         popup.up.style.setProperty("z-index", "1001");
+
+        if (!handler) {
+            popup.yesHandler = popup.noHandler;
+        } else {
+            popup.yesHandler = handler;
+        }
+
     },
     hidden: function() {
         popup.bg.style.setProperty("opacity", "0");
@@ -40,7 +47,7 @@ addOnloadListener(function() {
     a.style.setProperty("background", "#000");
     a.style.setProperty("opacity", "0");
     a.style.setProperty("filter", "alpha(opacity=0)");
-    a.style.setProperty("position", "absolute");
+    a.style.setProperty("position", "fixed");
     a.style.setProperty("width", "100%");
     a.style.setProperty("top", "0px");
     a.style.setProperty("height", "100%");
@@ -57,7 +64,7 @@ addOnloadListener(function() {
     b.style.setProperty("background", "#fff");
     b.style.setProperty("opacity", "0");
     b.style.setProperty("filter", "alpha(opacity=0)");
-    b.style.setProperty("position", "absolute");
+    b.style.setProperty("position", "fixed");
     b.style.setProperty("width", "400px");
     b.style.setProperty("margin-left", "-200px");
     b.style.setProperty("top", "50%");

@@ -18,7 +18,7 @@
         <script src="src/js/basic/info.js" type="text/javascript"></script>
         <!--Basico-->
         <!--Sistema-->
-        <script src="src/js/popup.js" type="text/javascript"></script>
+        <script src="src/js/popup.obj.js" type="text/javascript"></script>
         <script src="src/js/sistem.js" type="text/javascript"></script>
         <!--Sistema-->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

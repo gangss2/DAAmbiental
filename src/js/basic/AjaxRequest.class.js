@@ -77,3 +77,21 @@ AjaxRequest.prototype.okState = function() {
 };
 
 AjaxRequest.prototype.MimeText = "application/x-www-form-urlencoded; charset=UTF-8";
+
+AjaxRequest.prototype.debug = function() {
+
+    if (!this.campoDebug) {
+        this.campoDebug = document.createElement('div');
+        document.body.appendChild(this.campoDebug);
+    }
+    var c = this.campoDebug;
+    c.style.setProperty("position", "fixed");
+    c.style.setProperty("bottom", "5px");
+    c.style.setProperty("right", "5px");
+
+    var p = document.createElement('p');
+    p.innerHTML = this.getResponseText();
+
+    c.appendChild(p);
+
+};

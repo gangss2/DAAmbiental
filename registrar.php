@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <!--FB-->
-        <script src="src/API/fb/fb.api.js" type="text/javascript"></script>
+        <!--<script src="src/API/fb/fb.api.js" type="text/javascript"></script>-->
         <!--FB-->
         <!--Basico-->
         <script src="src/js/basic/AjaxRequest.class.js" type="text/javascript"></script>
@@ -20,7 +20,8 @@
         <script src="src/js/basic/info.js" type="text/javascript"></script>
         <!--Basico-->
         <!--Sistema-->
-        <script src="src/js/popup.js" type="text/javascript"></script>
+        <script src="src/js/registrar.func.js" type="text/javascript"></script>
+        <script src="src/js/popup.obj.js" type="text/javascript"></script>
         <!--Sistema-->
         <title>UNIUBE - Diretório Acadêmico - Ambiental</title>
     </head>
@@ -29,15 +30,15 @@
             <img src="src/imgs/logoIntro.png" width="300" height="300" />
             <div class="borderRedonda w400 font_nice">
                 <p class="titulo">Registrando</p>
-                <div id="01" style="display: block">
-                    <p>Digite seu R.A.</p>
-                    <p><input type="text" value="" /></p>
-                </div>
-                <div id="02" style="display: none">
-                    <p>Senha</p>
-                    <p><input type="password" value="" /></p>
-                </div>
-                <p><input type="submit" value="Próximo ->" class="buttonWhite" /></p>
+                <p>Digite seu R.A.</p>
+                <p><input type="number" value="" id="ra" /></p>
+                <p>Digite seu E-mail</p>
+                <p><input type="text" value="" id="email" /></p>
+                <p>Senha</p>
+                <p><input type="password" value="" id="senha1" /></p>
+                <p>Repita a senha</p>
+                <p><input type="password" value="" id="senha2" /></p>
+                <p><input type="submit" value="Próximo ->" class="buttonWhite" onclick="cadastrar();" /></p>
             </div>
         </div>
     </body>
