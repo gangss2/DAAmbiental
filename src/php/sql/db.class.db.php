@@ -2,21 +2,20 @@
 
 class db {
 
-//    private $tabela = "dados"; //o nome de sua tabela
-    // CFGTROCA
+    //    private $tabela = "dados"; //o nome de sua tabela
+// CFGTROCA
 //    --
 //    --
-//    private $host = "127.0.0.1"; //endereço do seu servidor MySQL
-//    private $database = "webplini_contraCTBC"; //o database que conterá sua tabela, muitas vezes seu próprio login
-//    private $login_db = "root"; //login usado no MySQL
-//    private $senha_db = ""; //senha usado no MySQL
+    private $host = "127.0.0.1"; //endereço do seu servidor MySQL
+    private $database = "webplini_contraCTBC"; //o database que conterá sua tabela, muitas vezes seu próprio login
+    private $login_db = "root"; //login usado no MySQL
+    private $senha_db = ""; //senha usado no MySQL
 //    --
 //    --
 //    private $database = "webplini_contraCTBC"; //o database que conterá sua tabela, muitas vezes seu próprio login
 //    private $host = "localhost"; //endereço do seu servidor MySQL
 //    private $login_db = "webplini_scripts"; //login usado no MySQL
 //    private $senha_db = "rootMASTER$$"; //senha usado no MySQL
-//    --
 //    --
     private $db; // ligação
     private $basedados; // database
