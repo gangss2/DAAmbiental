@@ -9,7 +9,7 @@
  */
 session_start();
 
-require './class/sql/db.class.php';
+//require './class/sql/db.class.php';
 require './class/user.php';
 
 $db = new db();

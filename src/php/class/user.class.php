@@ -1,5 +1,7 @@
 <?php
 
+include './sql/db.class.php';
+
 class user {
 
     // Funções Construtoras
@@ -13,7 +15,7 @@ class user {
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Dados cadastrais' AUTO_INCREMENT=1 ;";
 
-        $resultado = $this->db->query($SQL);
+        $resultado = self::$db->query($SQL);
 
         if ($resultado > 0) {
             return true;
@@ -22,15 +24,16 @@ class user {
         }
     }
 
-    private $db;
+    private static $db;
 
     function __construct($db) {
-        $this->db = $db;
+//        $this->db = $db;
+        self::$db = new db();
     }
 
     function cadastrar($ra, $senha, $email) {
         $SQL = "INSERT INTO `cadastro` (`ID`, `RA`, `senha`, `email`) VALUES (0,$ra,'$senha','$email')";
-        $result = $this->db->query($SQL);
+        $result = self::$db->query($SQL);
 
         if ($result) {
             return true;
