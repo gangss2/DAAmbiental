@@ -7,10 +7,13 @@
  * error => aviso de erros
  * 
  */
+error_reporting(E_ALL & ~E_STRICT);
+ini_set("display_errors", 1);
+
 session_start();
 
-//require './class/sql/db.class.php';
-require './class/user.php';
+require './class/sql/db.class.php';
+require './class/user.class.php';
 
 $db = new db();
 $user = new user($db);
@@ -18,14 +21,20 @@ $user = new user($db);
 if (!isset($_POST['ra'])) {
     $return['status'] = false;
     $return['error'] = "Favor digitar um valor para o RA!";
+
+    echo json_encode($return);
     exit();
 } else if (!isset($_POST['senha'])) {
     $return['status'] = false;
     $return['error'] = "Favor digitar uma senha!";
+
+    echo json_encode($return);
     exit();
 } else if (!isset($_POST['email'])) {
     $return['status'] = false;
     $return['error'] = "Favor digitar um valor para o e-mail!";
+
+    echo json_encode($return);
     exit();
 }
 

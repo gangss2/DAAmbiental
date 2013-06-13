@@ -8,6 +8,13 @@
     margin: auto;
 }
 
+
+/*Tamanho do texto*/
+
+.font_14em {
+    font-size: 140%;
+}
+
 /*Orientação do texto*/
 
 .center {

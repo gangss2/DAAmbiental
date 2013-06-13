@@ -29,6 +29,10 @@ cadastrar = function() {
 cadastrar.ajax = new AjaxRequest();
 cadastrar.hajax = function() {
     if (cadastrar.ajax.okState()) {
+        // APAGAR O DEBUG!
         cadastrar.ajax.debug();
+        
+        
+        
     }
 };

@@ -28,17 +28,34 @@
     <body>
         <div class="center">
             <img src="src/imgs/logoIntro.png" width="300" height="300" />
-            <div class="borderRedonda w400 font_nice">
-                <p class="titulo">Registrando</p>
-                <p>Digite seu R.A.</p>
-                <p><input type="text" value="" id="ra" /></p>
-                <p>Digite seu E-mail</p>
-                <p><input type="text" value="" id="email" /></p>
-                <p>Senha</p>
-                <p><input type="password" value="" id="senha1" /></p>
-                <p>Repita a senha</p>
-                <p><input type="password" value="" id="senha2" /></p>
-                <p><input type="submit" value="Próximo ->" class="buttonWhite" onclick="cadastrar();" /></p>
+            <div id="cadastrando">
+                <div class="borderRedonda w400 font_nice">
+                    <p class="titulo">Registrando</p>
+                    <p>Digite seu R.A.</p>
+                    <p><input type="text" value="" id="ra" /></p>
+                    <p>Digite seu E-mail</p>
+                    <p><input type="text" value="" id="email" /></p>
+                    <p>Senha</p>
+                    <p><input type="password" value="" id="senha1" /></p>
+                    <p>Repita a senha</p>
+                    <p><input type="password" value="" id="senha2" /></p>
+                    <p><input type="submit" value="Cadastrar" class="buttonWhite" onclick="cadastrar();" /></p>
+                </div>
+            </div>
+            <div id="aguardando" class="borderRedonda w400 font_nice">
+                <p class="center font_nice font_14em">Aguarde cadastrando ...</p>
+                <p class="center"><img src="src/imgs/ajax/loading.gif" width="16" height="16" alt="Carregando" /></p>
+            </div>
+            <div id="cadastrado" class="borderRedonda w400 font_nice">
+                <p class="center font_nice font_14em">Cadastrado com sucesso! ...</p>
+                <p class="center"><img src="src/imgs/ajax/done.png" width="16" height="16" alt="Carregando" /></p>
+            </div>
+            <div id="naoCadastrado" class="borderRedonda w400 font_nice">
+                <p class="center font_nice font_14em">Atenção, não foi possível realizar o cadastro! ...</p>
+                <p class="center"><img src="src/imgs/ajax/undone.png" width="16" height="16" alt="Carregando" /></p>
+                <ul id="error_report">
+                    
+                </ul>
             </div>
         </div>
     </body>
