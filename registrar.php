@@ -31,7 +31,7 @@
             <div class="borderRedonda w400 font_nice">
                 <p class="titulo">Registrando</p>
                 <p>Digite seu R.A.</p>
-                <p><input type="number" value="" id="ra" /></p>
+                <p><input type="text" value="" id="ra" /></p>
                 <p>Digite seu E-mail</p>
                 <p><input type="text" value="" id="email" /></p>
                 <p>Senha</p>
