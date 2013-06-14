@@ -54,10 +54,15 @@
             <div id="cadastrado" class="borderRedonda w400 font_nice" style="display: none;">
                 <p class="center font_nice font_14em">Cadastrado com sucesso! ...</p>
                 <p class="center"><img src="src/imgs/ajax/done.png" width="16" height="16" alt="Carregando" /></p>
+                <p class="center"><input type="button" value="Logar" class="buttonWhite" onclick="history.back();" /></p>
             </div>
             <div id="naoCadastrado" class="borderRedonda w400 font_nice" style="display: none;">
                 <p class="center font_nice font_14em">Atenção, não foi possível realizar o cadastro! ...</p>
                 <p class="center"><img src="src/imgs/ajax/undone.png" width="16" height="16" alt="Carregando" /></p>
+                <p class="center">
+                    <input type="button" value="Voltar para o login" class="buttonWhite" onclick="history.back();" />
+                    <input type="button" value="Voltar para o formulario" class="buttonWhite" onclick="mE.show('formulario');" />
+                </p>
                 <ul id="error_report">
 
                 </ul>
