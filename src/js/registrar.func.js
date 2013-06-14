@@ -33,18 +33,23 @@ cadastrar.hajax = function() {
     var ajax = cadastrar.ajax;
     if (ajax.okState()) {
         var response = JSON.parse(ajax.getResponseText());
-
         if (response.status) {
             mE.show('cadastrado');
         } else {
-            var error = Error('error_report');
             for (i in response.error)
-                error.add();
+                error.add(response.error[i]);
             mE.show('naoCadastrado');
         }
     }
 };
 
+// Error
+var error;
+addOnloadListener(function() {
+    error = new Error('error_report');
+});
+
+// mE
 var mE = new ManagerEfects();
 addOnloadListener(function() {
 

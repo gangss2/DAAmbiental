@@ -10,8 +10,9 @@ class user {
   `RA` int(11) NOT NULL,
   `senha` varchar(32) NOT NULL,
   `email` varchar(50) NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Dados cadastrais' AUTO_INCREMENT=1 ;";
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `RA` (`RA`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Dados cadastrais' AUTO_INCREMENT=25 ;";
 
         $resultado = $this->db->query($SQL);
 

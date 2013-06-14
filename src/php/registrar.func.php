@@ -20,19 +20,22 @@ $user = new user($db);
 
 if (!isset($_POST['ra'])) {
     $retorno['status'] = false;
-    $retorno['error'] = "Favor digitar um valor para o RA!";
+    $erro[] = "Favor digitar um valor para o RA!";
+    $retorno['error'] = $erro;
 
     echo json_encode($retorno);
     exit();
 } else if (!isset($_POST['senha'])) {
     $retorno['status'] = false;
-    $retorno['error'] = "Favor digitar uma senha!";
+    $erro[] = "Favor digitar uma senha!";
+    $retorno['error'] = $erro;
 
     echo json_encode($retorno);
     exit();
 } else if (!isset($_POST['email'])) {
     $retorno['status'] = false;
-    $retorno['error'] = "Favor digitar um valor para o e-mail!";
+    $erro[] = "Favor digitar um valor para o e-mail!";
+    $retorno['error'] = $erro;
 
     echo json_encode($retorno);
     exit();
@@ -52,7 +55,8 @@ if ($result) {
     echo json_encode($retorno);
 } else {
     $retorno['status'] = false;
-    $retorno['error'] = 'O cadastro não foi efetuado!';
+    $erro[] = 'Este RA já se encontra cadastrado!';
+    $retorno['error'] = $erro;
 
     echo json_encode($retorno);
 }
