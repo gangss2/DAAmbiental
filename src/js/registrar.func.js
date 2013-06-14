@@ -1,4 +1,5 @@
 cadastrar = function() {
+
     var ajax = cadastrar.ajax;
     var url = 'src/php/registrar.func.php';
     var prop = new Propriedades();
@@ -23,16 +24,35 @@ cadastrar = function() {
         prop.add('senha', senha1);
         prop.add('email', email);
 
+        mE.show('aguardando');
         ajax.send("POST", url, cadastrar.hajax, ajax.MimeText, prop.getPostProperties());
     }
 };
 cadastrar.ajax = new AjaxRequest();
 cadastrar.hajax = function() {
-    if (cadastrar.ajax.okState()) {
-        // APAGAR O DEBUG!
-        cadastrar.ajax.debug();
-        
-        
-        
+    var ajax = cadastrar.ajax;
+    if (ajax.okState()) {
+        var response = JSON.parse(ajax.getResponseText());
+
+        if (response.status) {
+            mE.show('cadastrado');
+        } else {
+            mE.show('naoCadastrado');
+        }
     }
 };
+
+var mE = new ManagerEfects();
+addOnloadListener(function() {
+
+    var formulario = new Elipse('formulario');
+    var aguardando = new Elipse('aguardando');
+    var cadastrado = new Elipse('cadastrado');
+    var naoCadastrado = new Elipse('naoCadastrado');
+
+    mE.addEfect('formulario', formulario);
+    mE.addEfect('aguardando', aguardando);
+    mE.addEfect('cadastrado', cadastrado);
+    mE.addEfect('naoCadastrado', naoCadastrado);
+
+});

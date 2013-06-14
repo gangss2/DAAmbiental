@@ -3,12 +3,12 @@
 /**
  * Array(
  * status => true or false,
- * response => [ ],
+ * response => Registrado com sucesso,
  * error => aviso de erros
  * 
  */
-error_reporting(E_ALL & ~E_STRICT);
-ini_set("display_errors", 1);
+//error_reporting(E_ALL & ~E_STRICT);
+//ini_set("display_errors", 1);
 
 session_start();
 
@@ -19,22 +19,22 @@ $db = new db();
 $user = new user($db);
 
 if (!isset($_POST['ra'])) {
-    $return['status'] = false;
-    $return['error'] = "Favor digitar um valor para o RA!";
+    $retorno['status'] = false;
+    $retorno['error'] = "Favor digitar um valor para o RA!";
 
-    echo json_encode($return);
+    echo json_encode($retorno);
     exit();
 } else if (!isset($_POST['senha'])) {
-    $return['status'] = false;
-    $return['error'] = "Favor digitar uma senha!";
+    $retorno['status'] = false;
+    $retorno['error'] = "Favor digitar uma senha!";
 
-    echo json_encode($return);
+    echo json_encode($retorno);
     exit();
 } else if (!isset($_POST['email'])) {
-    $return['status'] = false;
-    $return['error'] = "Favor digitar um valor para o e-mail!";
+    $retorno['status'] = false;
+    $retorno['error'] = "Favor digitar um valor para o e-mail!";
 
-    echo json_encode($return);
+    echo json_encode($retorno);
     exit();
 }
 
@@ -46,14 +46,14 @@ $email = $_POST['email'];
 $result = $user->cadastrar($ra, $senha, $email);
 
 if ($result) {
-    $return['status'] = true;
-    $return['response'] = 'Cadastro efetuado com sucesso!';
+    $retorno['status'] = true;
+    $retorno['response'] = 'Cadastro efetuado com sucesso!';
 
-    echo json_encode($result);
+    echo json_encode($retorno);
 } else {
-    $return['status'] = false;
-    $return['error'] = 'O cadastro não foi efetuado!';
+    $retorno['status'] = false;
+    $retorno['error'] = 'O cadastro não foi efetuado!';
 
-    echo json_encode($result);
+    echo json_encode($retorno);
 }
 ?>
