@@ -37,6 +37,9 @@ cadastrar.hajax = function() {
         if (response.status) {
             mE.show('cadastrado');
         } else {
+            var error = Error('error_report');
+            for (i in response.error)
+                error.add();
             mE.show('naoCadastrado');
         }
     }

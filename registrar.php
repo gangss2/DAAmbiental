@@ -20,6 +20,7 @@
         <script src="src/js/basic/info.js" type="text/javascript"></script>
         <!--Basico-->
         <!--efects-->
+        <script src="src/js/efects/errorlist.class.js" type="text/javascript"></script>
         <script src="src/js/efects/Elipse.class.js" type="text/javascript"></script>
         <script src="src/js/efects/ManagerEfects.class.js" type="text/javascript"></script>
         <!--efects-->
