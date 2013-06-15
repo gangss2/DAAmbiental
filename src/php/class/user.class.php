@@ -24,6 +24,8 @@ class user {
     }
 
     private $db;
+    private $ra;
+    private $email;
 
     function __construct($db) {
         $this->db = $db;
@@ -38,6 +40,45 @@ class user {
         } else {
             return false;
         }
+    }
+
+    function verify($ra, $senha) {
+        $SQL = "SELECT * FROM `cadastro` WHERE `RA` = $ra AND `senha` LIKE '$senha'";
+        $result = $this->db->query($SQL);
+        $dados = mysql_fetch_array($result);
+        if (!$dados) {
+            return false;
+        } else {
+            $this->ra = $dados['RA'];
+            $this->email = $dados['email'];
+            return true;
+        }
+    }
+
+    //Getters & Setters ...
+
+    public function getDb() {
+        return $this->db;
+    }
+
+    public function setDb($db) {
+        $this->db = $db;
+    }
+
+    public function getRa() {
+        return $this->ra;
+    }
+
+    public function setRa($ra) {
+        $this->ra = $ra;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function setEmail($email) {
+        $this->email = $email;
     }
 
 }

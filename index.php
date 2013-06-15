@@ -33,7 +33,7 @@
                     <p><input type="text" value="" name="RA" id="RA" /></p>
                     <p>Senha</p>
                     <p><input type="password" value="" name="senha" id="senha" /></p>
-                    <p><input type="submit" value="Logar" class="buttonWhite" /></p>
+                    <p><input type="submit" value="Logar" class="buttonWhite"  /></p>
                 </form>
             </div>
         </div>
