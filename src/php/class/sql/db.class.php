@@ -2,25 +2,18 @@
 
 class db {
 
-//    private $tabela = "dados"; //o nome de sua tabela
-// CFGTROCA
-//    --
-//    --
-    private $host = "127.0.0.1"; //endereço do seu servidor MySQL
-    private $database = "da"; //o database que conterá sua tabela, muitas vezes seu próprio login
-    private $login_db = "root"; //login usado no MySQL
-    private $senha_db = ""; //senha usado no MySQL
-//    --
-//    --
-//    private $database = "webplini_contraCTBC"; //o database que conterá sua tabela, muitas vezes seu próprio login
-//    private $host = "localhost"; //endereço do seu servidor MySQL
-//    private $login_db = "webplini_scripts"; //login usado no MySQL
-//    private $senha_db = "rootMASTER$$"; //senha usado no MySQL
-//    --
+    private $host;
+    private $login_db;
+    private $senha_db;
+    //
     private $db; // ligação
     private $basedados; // database
 
-    function __construct() {
+    function __construct($iniCfgs) {
+        $this->host = $cfgs->getHost();
+        $this->senha_db = $cfgs->getSenha_db();
+        $this->login_db = $cfgs->getLogin_db();
+
         $this->db = mysql_connect($this->host, $this->login_db, $this->senha_db);
         $this->basedados = mysql_select_db($this->database, $this->db);
     }

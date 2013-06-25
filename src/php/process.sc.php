@@ -24,7 +24,16 @@ $action = $_GET['a'];
  * Recuperar a senha
  */
 
-if (($action == 'trocaSenha') && (isset($_GET['senha'])) && (isset($_GET['novaSenha']))) {
+
+if (($action == 'sendMailSenha') && (isset($_GET['ra']))) {
+    $ra = $_GET['ra'];
+    $SQL = "SELECT `senha` FROM `cadastro` WHERE `RA` = $ra";
+    $result = $db->query($SQL);
+    $linha = mysql_fetch_array($result);
+    $senha = $linha['senha'];
+    
+    
+} else if (($action == 'trocaSenha') && (isset($_GET['senha'])) && (isset($_GET['novaSenha']))) {
     $senha = $_GET['senha'];
     $novaSenha = $_GET['novaSenha'];
     $SQL = "UPDATE `cadastro` SET `senha`=`$novaSenha` WHERE `senha` LIKE `$senha`";
@@ -43,5 +52,4 @@ if (($action == 'trocaSenha') && (isset($_GET['senha'])) && (isset($_GET['novaSe
         exit();
     }
 }
-
 ?>
