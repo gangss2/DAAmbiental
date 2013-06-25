@@ -43,4 +43,5 @@ if (($action == 'trocaSenha') && (isset($_GET['senha'])) && (isset($_GET['novaSe
         exit();
     }
 }
+
 ?>
