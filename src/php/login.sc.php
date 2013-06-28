@@ -2,10 +2,12 @@
 
 session_start();
 
+require_once './class/cfgs.class.ex.php';
 require_once './class/sql/db.class.php';
 require_once './class/user.class.php';
 
-$db = new db();
+$cfg = new ConfigDB();
+$db = new db($cfg);
 $user = new user($db);
 
 

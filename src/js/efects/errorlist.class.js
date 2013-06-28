@@ -18,4 +18,4 @@ Error.prototype.getError = function(id) {
 Error.prototype.clear = function() {
     for (var i = 0; i <= this.scene.childElementCount; i++)
         this.scene.removeChild(this.scene.firstChild);
-}
+};
