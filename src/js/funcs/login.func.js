@@ -3,12 +3,18 @@ logar = function() {
     var prop = new Propriedades();
 
     var ra = $id('RA').value;
-    var senha = MD5($id('senha').value);
+//    var senha = MD5((($id('senha').value) == "" ? null : ($id('senha').value)));
+    var campoSenha = $id('senha');
 
-    prop.add('RA', ra);
+    if (campoSenha.length >= 6)
+        var senha = MD5(((campoSenha.value)));
+    else
+        var senha;
+
+    prop.add('ra', ra);
     prop.add('senha', senha);
 
-    var url = cfgs.urlLogar;
+    url = cfgs.urlLogar + prop.getUrlProperties();
 
     ajax.send("GET", url, logar.handler);
 
@@ -37,7 +43,7 @@ logar.form = function() {
     logar.hiddenAll();
     var form = new Elipse('login_form');
     form.show();
-    
+
     var error = new Error('login_error_list');
     error.clear();
 };

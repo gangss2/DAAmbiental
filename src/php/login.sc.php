@@ -13,7 +13,7 @@ $user = new user($db);
 
 $retorno['status'] = false;
 
-if (!(isset($_GET['ra'])) || (!isset($_GET['senha']))) {
+if (!(isset($_GET['ra'])) || (!isset($_GET['senha']) && $_GET['senha'] == 'undefined')) {
     if (!isset($_GET['ra'])) {
         $erro[] = 'Digite um RA!';
     }
@@ -35,7 +35,7 @@ if (!(isset($_GET['ra'])) || (!isset($_GET['senha']))) {
         $retorno['status'] = true;
         echo json_encode($retorno);
     } else {
-        $erro[] = 'Par RA Senha não encontrado, cadastre-se!';
+        $erro[] = 'Digite um RA e Senha cadastrado!';
         $retorno['error'] = $erro;
         echo json_encode($retorno);
     }
