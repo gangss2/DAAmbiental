@@ -13,7 +13,7 @@ $user = new user($db);
 
 $retorno['status'] = false;
 
-if (!(isset($_GET['ra'])) || (!isset($_GET['senha']) && $_GET['senha'] == 'undefined')) {
+if (!(isset($_GET['ra'])) || (!isset($_GET['senha']))) {
     if (!isset($_GET['ra'])) {
         $erro[] = 'Digite um RA!';
     }

@@ -25,7 +25,7 @@
         <script src="src/js/efects/ManagerEfects.class.js" type="text/javascript"></script>
         <!--efects-->
         <!--Sistema-->
-        <script src="src/js/registrar.func.js" type="text/javascript"></script>
+        <script src="src/js/funcs/registrar.func.js" type="text/javascript"></script>
         <script src="src/js/cfgs.obj.ex.js" type="text/javascript"></script>
         <script src="src/js/popup.obj.js" type="text/javascript"></script>
         <!--Sistema-->
