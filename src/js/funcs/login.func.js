@@ -6,11 +6,11 @@ logar = function() {
 //    var senha = MD5((($id('senha').value) == "" ? null : ($id('senha').value)));
     var campoSenha = $id('senha');
 
-    if (campoSenha.length >= 6) {
+    prop.add('ra', ra);
+    if (campoSenha.value.length >= 6) {
         var senha = MD5(((campoSenha.value)));
         prop.add('senha', senha);
     }
-    prop.add('ra', ra);
 
     url = cfgs.urlLogar + prop.getUrlProperties();
 
