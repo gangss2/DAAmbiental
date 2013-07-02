@@ -12,10 +12,12 @@
 
 session_start();
 
+require './class/cfgs.class.ex.php';
 require './class/sql/db.class.php';
 require './class/user.class.php';
 
-$db = new db();
+$cfgs = new ConfigDB();
+$db = new db($cfgs);
 $user = new user($db);
 
 if (!isset($_POST['ra'])) {

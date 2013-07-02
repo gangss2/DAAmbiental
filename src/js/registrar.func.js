@@ -1,7 +1,7 @@
 cadastrar = function() {
 
     var ajax = cadastrar.ajax;
-    var url = 'src/php/registrar.func.php';
+    var url = cfgs.urlRegistrar;
     var prop = new Propriedades();
 
     var ra = $id('ra').value;
