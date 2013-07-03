@@ -39,20 +39,19 @@
                     <p><input type="text" value="" name="RA" id="RA" /></p>
                     <p>Senha</p>
                     <p><input type="password" value="" name="senha" id="senha" /></p>
-                    <p><input type="button" value="Logar" class="buttonWhite" onclick="logar()" /></p>
+                    <p><input type="button" value="Logar" class="buttonWhite" onclick="logar();" /></p>
                 </form>
             </div>
             <div id="login_error" class="borderRedonda w200" style="display: none">
                 <p class="titulo"><img src="src/imgs/ajax/undone.png" width="16" height="16"> Erro!</p>
                 <ul id="login_error_list">
                 </ul>
-                <p><input type="button" value="<- Voltar" class="buttonWhite" onclick="logar.form();"
+                <p><input type="button" value="<- Voltar" class="buttonWhite" onclick="logar.form();"></p>
             </div>
             <div id="login_done" class="borderRedonda w200" style="display: none">
                 <p class="titulo"><img src="src/imgs/ajax/done.png" width="16" height="16"> Logado!</p>
                 <p>Carregando a página!</p>
                 <p>Aguarde ..</p>
             </div>
-        </div>
     </body>
 </html>
